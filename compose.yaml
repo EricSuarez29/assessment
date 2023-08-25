@@ -1,0 +1,29 @@
+version: '3.9'
+services:
+  mysql:
+    image: 'mysql:latest'
+    environment:
+      - 'MYSQL_DATABASE=metaphorce'
+      - 'MYSQL_ROOT_PASSWORD=strong_password'
+      - 'MYSQL_USER=admin'
+      - 'MYSQL_PASSWORD=admin_secret'
+    ports:
+      - '3306:3306'
+    networks:
+      - db
+  phpmyadmin:
+    image: phpmyadmin
+    restart: always
+    ports:
+      - 80:80
+    environment:
+      - PMA_ARBITRARY=1
+      - PMA_HOST=mysql
+      - PMA_ROOT_PASSWORD=strong_password
+    networks:
+      - db
+    depends_on:
+      - mysql
+networks:
+  db:
+    driver: bridge

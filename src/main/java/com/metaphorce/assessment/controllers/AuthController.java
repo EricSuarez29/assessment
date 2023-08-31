@@ -23,9 +23,4 @@ public class AuthController {
         userRepository.save(user);
         return ResponseEntity.ok().build();
     }
-
-    @GetMapping("/testing")
-    public ResponseEntity<?> testing() {
-        return ResponseEntity.ok("something");
-    }
 }

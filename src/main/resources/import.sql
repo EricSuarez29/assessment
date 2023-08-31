@@ -1,0 +1,3 @@
+INSERT INTO tasks(description, status, created_at) VALUES ('en un lugar de la mancha de cuyo nombre no quiero ni recordar', 0, NOW());
+INSERT INTO tasks(description, status, created_at) VALUES ('Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat, consequatur.', 0, NOW());
+INSERT INTO tasks(description, status, created_at) VALUES ('Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem pariatur mollitia sequi nihil neque optio laudantium voluptatum, ipsam nam et.', 1, NOW());
